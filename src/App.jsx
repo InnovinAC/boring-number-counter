@@ -22,6 +22,7 @@ function App() {
         dispatchCounter({type: 'DECREASE'})
     }
     const reset = () => {
+        console.log('heyy')
         dispatchCounter({type: 'RESET'})
     }
 
@@ -29,7 +30,7 @@ function App() {
         counterState === 1 && (console.log('hmm'));
 
     }, [counterState])
-
+console.log(counterState.count);
     return (
         <>
 
