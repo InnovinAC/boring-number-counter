@@ -7,8 +7,8 @@ const initialCount = oldCount || {count: 0}
 
 const reducer = (state, action) => {
     let returnValue;
-    action.type === 'INCREASE' && (returnValue = {count: state.count++})
-    action.type === 'DECREASE' && (returnValue = {count: state.count--})
+    action.type === 'INCREASE' && (returnValue = {count: state.count + 1})
+    action.type === 'DECREASE' && (returnValue = {count: state.count - 1})
     action.type === 'RESET' && (returnValue = {count: 0})
     return returnValue || {count: 0}
 }
